@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | Agência de Viagens em Brasília</title>
+    <meta name="description" content="{{ page.description }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style-agencia.css' | relative_url }}">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header com Foco Total no Contato -->
+    <header class="site-header-agencia">
+        <div class="container header-content">
+            <div class="logo">{{ page.empresa_nome }}</div>
+            <a href="https://wa.me/{{ page.whatsapp }}" class="btn-whatsapp-header" target="_blank">
+                Falar no WhatsApp
+            </a>
+        </div>
+    </header>
+
+    {{ content }}
+
+    <footer class="site-footer-agencia">
+        <div class="container">
+            <p><strong>Atenção:</strong> Dados de contato sujeitos à validação manual.</p>
+            <p>&copy; 2026 {{ page.empresa_nome }}. Site modelo desenvolvido por Dr. José Spadeto.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true });
+    </script>
+</body>
+</html>
